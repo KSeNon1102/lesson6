@@ -7,8 +7,51 @@ namespace lesson6
     {
         static void Main(string[] args)
         {
-            Task1();
+            //Task1();
             Task2();
+            //Task3();
+            Task4();
+            Console.ReadLine();
+        }
+
+        static void Task4()
+        {
+            Console.WriteLine("Пишем стихи..");
+            string arrWord = Console.ReadLine();
+            foreach(var item in arrWord.Split(','))
+            Console.WriteLine(item);
+            Console.WriteLine( arrWord.Replace('O', 'A'));
+            string print = string.Empty;
+            foreach(var abc in arrWord)
+            {
+                if (abc == 'Л')
+                    print += abc + 'Ь';
+                print += abc;
+
+            }
+
+            Console.WriteLine(print);
+            for(var i = 0; i<arrWord.Length; i++)
+            {
+                if(arrWord[i] == 'Ь'&& arrWord[i-1] == 'Т')
+                {
+                    arrWord.Remove(i, 0);
+                }
+            }
+            arrWord.Split(' ').ToList().ForEach(f=> Console.WriteLine( f));
+
+            
+        }
+
+
+        static void Task3()
+        {
+            Console.WriteLine("Предложение давай... Руки и сердца не предлогать!");
+            string arrWord = Console.ReadLine();
+            Console.WriteLine("Предложение накалякал аж на целых {0} буквачек. Боже откуда у людей такие познания в языках!!!:)", arrWord.Length);
+            if(arrWord.Length >=13)
+            Console.WriteLine("{0}", arrWord.Remove(13)+"...");
+
         }
 
         static void Task1()
@@ -29,6 +72,7 @@ namespace lesson6
 
         static void Task2()
         {
+            //kkkkk
             int[,] map = new int[3, 3];
             for (int i = 0, k = 0; i < 3; i++)
             {
@@ -121,6 +165,12 @@ namespace lesson6
                 }                
             }
             return new int[] { 0, 0 };
+        }
+
+        static Array QuickSort(Array array)
+        {
+             Array.Sort(array);
+            return array;
         }
 
         static void Print(int[,] matrix)
