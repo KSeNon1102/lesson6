@@ -8,7 +8,7 @@ namespace lesson6
         static void Main(string[] args)
         {
             //Task1();
-            //Task2();
+            Task2();
             //Task3();
             Task4();
             Console.ReadLine();
@@ -72,6 +72,7 @@ namespace lesson6
 
         static void Task2()
         {
+            //kkkkk
             int[,] map = new int[3, 3];
             for (int i = 0, k = 0; i < 3; i++)
             {
@@ -164,6 +165,12 @@ namespace lesson6
                 }                
             }
             return new int[] { 0, 0 };
+        }
+
+        static Array QuickSort(Array array)
+        {
+             Array.Sort(array);
+            return array;
         }
 
         static void Print(int[,] matrix)
